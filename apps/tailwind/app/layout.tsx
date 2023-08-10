@@ -1,5 +1,3 @@
-import "./styles/uno.css";
-
 export default function RootLayout({
   children,
 }: {

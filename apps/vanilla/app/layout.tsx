@@ -1,3 +1,7 @@
+import clsx from "clsx";
+import "./styles/core/global.css";
+import { defaultTheme, responsiveTheme } from "./styles/theme.css";
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={clsx(defaultTheme, responsiveTheme)}>{children}</body>
     </html>
   );
 }
