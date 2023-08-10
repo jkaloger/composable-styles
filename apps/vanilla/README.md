@@ -13,4 +13,4 @@ Sprinkles -- Generate a static set of custom utility classes and compose them ei
 
 ---
 
-❌ More setup required
+- ❌ More setup required
