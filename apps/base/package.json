@@ -1,5 +1,5 @@
 {
-  "name": "@css/vanilla",
+  "name": "@css/base",
   "version": "1.0.0",
   "private": true,
   "scripts": {

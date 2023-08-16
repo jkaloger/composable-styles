@@ -1,5 +1,5 @@
 {
-  "name": "@css/vanilla",
+  "name": "@css/tailwind",
   "version": "1.0.0",
   "private": true,
   "scripts": {
