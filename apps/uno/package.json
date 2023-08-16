@@ -20,6 +20,7 @@
     "@types/react-dom": "^18.0.7",
     "@unocss/postcss": "^0.54.2",
     "@unocss/preset-attributify": "^0.54.2",
+    "@unocss/transformer-attributify-jsx": "^0.55.0",
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
     "typescript": "^4.5.3"

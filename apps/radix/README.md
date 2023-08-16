@@ -4,6 +4,9 @@ An open source component library optimized for fast development, easy maintenanc
 
 ---
 
-✅ Accessible
-✅ Themeable
-❌ Opinionated
+- ✅ Accessible
+- ✅ Themeable
+
+---
+
+- ❌ Opinionated

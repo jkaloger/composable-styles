@@ -1,3 +1,5 @@
+import "../styles/panda.css";
+
 export default function RootLayout({
   children,
 }: {

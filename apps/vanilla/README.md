@@ -9,7 +9,7 @@ Sprinkles -- Generate a static set of custom utility classes and compose them ei
 - ✅ Totally modular and customisable
 - ✅ Unopinionated
 - ✅ Theme support
-- ✅ Supports both Atomic CSS (with `sprinkles`) and component specific css (with `css`)
+- ✅ Supports both Atomic CSS (with `sprinkles`) and component based css (with `css`)
 
 ---
 
