@@ -41,6 +41,7 @@ export default function Page() {
           <Grid columns={3} margin={2} gap={2}>
             <Box
               background="glass"
+              radius="3"
               backdropFilter="glass"
               padding={2}
               columnSpan={1}
@@ -49,6 +50,7 @@ export default function Page() {
             </Box>
             <Box
               background="glass"
+              radius="3"
               backdropFilter="glass"
               padding={2}
               columnSpan={2}
@@ -57,6 +59,7 @@ export default function Page() {
             </Box>
             <Box
               background="glass"
+              radius="3"
               backdropFilter="glass"
               padding={2}
               columnSpan={2}
@@ -65,21 +68,57 @@ export default function Page() {
             </Box>
             <Box
               background="glass"
+              radius="3"
+              backdropFilter="glass"
+              padding={2}
+            >
+              Span 1
+            </Box>
+            <Box
+              background="glass"
+              radius="3"
               backdropFilter="glass"
               padding={2}
               columnSpan={3}
             >
               Span 3
             </Box>
-            <Box
-              background="glass"
-              backdropFilter="glass"
-              padding={2}
-              columnSpan={4}
-            >
-              Span 4
-            </Box>
           </Grid>
+        </Container>
+
+        <Container size="sm">
+          <Flex
+            alignItems="flex-start"
+            justifyContent="flex-start"
+            paddingY={3}
+            gap={1}
+          >
+            <Box
+              background="eucalyptus900"
+              paddingTop={1}
+              paddingLeft={1}
+            ></Box>
+            <Box
+              background="eucalyptus900"
+              paddingTop={2}
+              paddingLeft={2}
+            ></Box>
+            <Box
+              background="eucalyptus900"
+              paddingTop={3}
+              paddingLeft={3}
+            ></Box>
+            <Box
+              background="eucalyptus900"
+              paddingTop={4}
+              paddingLeft={4}
+            ></Box>
+            <Box
+              background="eucalyptus900"
+              paddingTop={5}
+              paddingLeft={5}
+            ></Box>
+          </Flex>
         </Container>
 
         <Container size="sm">

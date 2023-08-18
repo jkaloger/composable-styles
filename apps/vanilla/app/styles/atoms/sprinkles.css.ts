@@ -30,6 +30,8 @@ const responsiveProperties = defineProperties({
     marginTop: vars.spacingRel,
     marginBottom: vars.spacingRel,
 
+    height: { ...vars.spacingConst, ...vars.breakpoints },
+    maxHeight: { ...vars.spacingConst, ...vars.breakpoints, full: "100vh" },
     width: { ...vars.spacingConst, ...vars.breakpoints },
     maxWidth: { ...vars.spacingConst, ...vars.breakpoints, full: "100vw" },
 

@@ -8,7 +8,7 @@ export const colors = {
   lightGrey: "#F9F9F9",
   white: "#fff",
 
-  glass: "#fffffff1",
+  glass: "#ffffff77",
   overlay: "#00000073",
 
   eucalyptus100: "#E6FCF6",

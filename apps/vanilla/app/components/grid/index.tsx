@@ -24,7 +24,7 @@ const Grid = React.forwardRef<HTMLElement, Props>(
       display: "grid",
     };
     const nativeProps: Record<string, unknown> = {
-      gridTemplateColumns: `repeat(${columns}, 1fr)`,
+      "grid-template-columns": `repeat(${columns}, 1fr)`,
     };
 
     /* eslint-disable no-restricted-syntax */

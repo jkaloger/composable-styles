@@ -25,6 +25,29 @@ export default function Page() {
             <div className="p-5 shadow-2xl bg-white rounded-lg">shadow-2xl</div>
           </div>
         </div>
+        <div className="grid grid-cols-3 gap-4 w-6/12 my-12">
+          <div className="p-4 rounded-lg bg-indigo-300 dark:bg-indigo-800 dark:text-indigo-400">
+            01
+          </div>
+          <div className="p-4 rounded-lg bg-indigo-300 dark:bg-indigo-800 dark:text-indigo-400">
+            02
+          </div>
+          <div className="p-4 rounded-lg bg-indigo-300 dark:bg-indigo-800 dark:text-indigo-400">
+            03
+          </div>
+          <div className="p-4 rounded-lg  bg-indigo-800 text-indigo-400 col-span-2">
+            04
+          </div>
+          <div className="p-4 rounded-lg bg-indigo-300 dark:bg-indigo-800 dark:text-indigo-400">
+            05
+          </div>
+          <div className="p-4 rounded-lg bg-indigo-300 dark:bg-indigo-800 dark:text-indigo-400">
+            06
+          </div>
+          <div className="p-4 rounded-lg  bg-indigo-800 text-indigo-400 col-span-2">
+            07
+          </div>
+        </div>
       </div>
     </>
   );
