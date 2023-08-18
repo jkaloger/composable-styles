@@ -2,6 +2,10 @@ import { createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
 import { vars } from "../theme.css";
 import { mapValues } from "lodash/fp";
 import { breakpoints } from "../core/breakpoints.css";
+import { framework } from "../core/layers.css";
+
+type ConditionKey = "@media" | "@supports" | "@container" | "selector";
+type Condition = Partial<Record<ConditionKey, string>>;
 
 const generateBreakpoints = mapValues((breakpoint: number) =>
   breakpoint === 0
@@ -9,7 +13,10 @@ const generateBreakpoints = mapValues((breakpoint: number) =>
     : { "@media": `screen and (min-width: ${breakpoint}px)` }
 );
 
+const columns = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
 const responsiveProperties = defineProperties({
+  "@layer": framework,
   conditions: generateBreakpoints(breakpoints),
   defaultCondition: "sm",
   properties: {
@@ -39,6 +46,7 @@ const responsiveProperties = defineProperties({
 });
 
 const eventProperties = defineProperties({
+  "@layer": framework,
   conditions: {
     default: {},
     active: { selector: "&:active:not(:disabled)" },
@@ -60,6 +68,7 @@ const eventProperties = defineProperties({
 });
 
 const animationProperties = defineProperties({
+  "@layer": framework,
   conditions: {
     default: {},
     reduceMotion: { "@media": "(prefers-reduced-motion: reduce)" },
@@ -73,6 +82,7 @@ const animationProperties = defineProperties({
 });
 
 const unresponsiveProperties = defineProperties({
+  "@layer": framework,
   properties: {
     backgroundColor: vars.colors,
     background: vars.colors,
@@ -85,6 +95,7 @@ const unresponsiveProperties = defineProperties({
 });
 
 const flexProperties = defineProperties({
+  "@layer": framework,
   conditions: generateBreakpoints(breakpoints),
   defaultCondition: "sm",
   properties: {
@@ -101,7 +112,34 @@ const flexProperties = defineProperties({
   },
 });
 
+const gridProperties = defineProperties({
+  "@layer": framework,
+  conditions: generateBreakpoints(breakpoints),
+  defaultCondition: "sm",
+  properties: {
+    display: ["grid", "inline-grid"],
+    gridColumnStart: columns,
+    gridColumnEnd: columns,
+    gridColumn: columns
+      .map((n) => ({ [n]: `span ${n} / span ${n}` }))
+      .reduce((prev, current) => ({ ...prev, ...current }), {}),
+    gap: vars.spacingRel,
+    alignItems: ["center", "grid-start", "grid-end"],
+    justifyContent: ["center", "grid-start", "grid-end"],
+    gridTemplateColumns: ["repeat(12, 1fr)"],
+  },
+  shorthands: {
+    align: ["alignItems"],
+    justify: ["justifyContent"],
+    columnStart: ["gridColumnStart"],
+    columnEnd: ["gridColumnEnd"],
+    columnSpan: ["gridColumn"],
+  },
+});
+
 export const sprinkles = createSprinkles(
+  gridProperties,
+  flexProperties,
   responsiveProperties,
   animationProperties,
   eventProperties,
@@ -118,3 +156,12 @@ export const flexSprinkles = createSprinkles(
 );
 
 export type FlexSprinkles = Parameters<typeof flexSprinkles>[0];
+
+export const gridSprinkles = createSprinkles(
+  gridProperties,
+  responsiveProperties,
+  eventProperties,
+  unresponsiveProperties
+);
+
+export type GridSprinkles = Parameters<typeof gridSprinkles>[0];

@@ -10,6 +10,7 @@ Sprinkles -- Generate a static set of custom utility classes and compose them ei
 - ✅ Unopinionated
 - ✅ Theme support
 - ✅ Supports both Atomic CSS (with `sprinkles`) and component based css (with `css`)
+- ✅ Supports [@layer](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer)
 
 ---
 

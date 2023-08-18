@@ -6,7 +6,12 @@ export default function Page() {
   return (
     <HStack gap="4">
       <Stack gap="6" padding="5">
-        <div className={css({ fontSize: "2xl", fontWeight: "bold" })}>
+        <div
+          className={css({
+            fontSize: "2xl",
+            fontWeight: "bold",
+          })}
+        >
           Hello 🐼!
         </div>
         <div className={css({ fontSize: "3xl", fontWeight: "thin" })}>

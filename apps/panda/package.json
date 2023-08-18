@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "prepare": "panda codegen",
+    "panda:watch": "panda watch",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

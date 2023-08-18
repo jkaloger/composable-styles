@@ -3,6 +3,7 @@ import { Button } from "./components/button";
 import { Container } from "./components/container";
 import { CoolGradient } from "./components/cool-gradient";
 import { Flex } from "./components/flex";
+import { Grid } from "./components/grid";
 import { Heading } from "./components/heading";
 import { Text } from "./components/text";
 
@@ -37,6 +38,51 @@ export default function Page() {
         </Container>
 
         <Container size="sm" background="eucalyptusLinear">
+          <Grid columns={3} margin={2} gap={2}>
+            <Box
+              background="glass"
+              backdropFilter="glass"
+              padding={2}
+              columnSpan={1}
+            >
+              Span 1
+            </Box>
+            <Box
+              background="glass"
+              backdropFilter="glass"
+              padding={2}
+              columnSpan={2}
+            >
+              Span 2
+            </Box>
+            <Box
+              background="glass"
+              backdropFilter="glass"
+              padding={2}
+              columnSpan={2}
+            >
+              Span 2
+            </Box>
+            <Box
+              background="glass"
+              backdropFilter="glass"
+              padding={2}
+              columnSpan={3}
+            >
+              Span 3
+            </Box>
+            <Box
+              background="glass"
+              backdropFilter="glass"
+              padding={2}
+              columnSpan={4}
+            >
+              Span 4
+            </Box>
+          </Grid>
+        </Container>
+
+        <Container size="sm">
           <Box position="relative" paddingY={3}>
             <Flex
               padding={1}

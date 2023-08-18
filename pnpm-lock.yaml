@@ -241,6 +241,9 @@ importers:
       next:
         specifier: ^13.4.1
         version: 13.4.1(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)
+      rainbow-sprinkles:
+        specifier: ^0.17.0
+        version: 0.17.0(@vanilla-extract/css@1.12.0)(@vanilla-extract/dynamic@2.0.3)
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -8091,6 +8094,16 @@ packages:
 
   /queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
+
+  /rainbow-sprinkles@0.17.0(@vanilla-extract/css@1.12.0)(@vanilla-extract/dynamic@2.0.3):
+    resolution: {integrity: sha512-ok3NrylQ0szvJtuBYaB/w09L9zOvvqcSQrvycT2A5XJxQNvwvkeADvTqQWGOQ3b6MkO8UmYccBPt8g8vVvxM9A==}
+    peerDependencies:
+      '@vanilla-extract/css': ^1
+      '@vanilla-extract/dynamic': ^2
+    dependencies:
+      '@vanilla-extract/css': 1.12.0
+      '@vanilla-extract/dynamic': 2.0.3
+    dev: false
 
   /randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}

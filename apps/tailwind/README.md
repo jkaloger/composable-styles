@@ -7,6 +7,8 @@ Utility-first CSS framework
 - ✅ Loads of atomic classes/utilities
 - ✅ Very minimal setup - just PostCSS + Tailwind!
 - ✅ Same utility classes across multiple projects
+- ✅ Supports [@layer](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer)
+- ✅ Well documented
 
 ---
 
