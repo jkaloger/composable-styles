@@ -10,7 +10,10 @@ Utility-first CSS framework
 
 ---
 
-- ❌ Need to learn syntax
-- ❌ Sites can end up looking (same-y)[https://tailwindcss.com/showcase]
-- ❌ Components cost $$
+- ❌ Different syntax to css
+- ❌ Sites can end up looking [same-y](https://tailwindcss.com/showcase) (it is possible to avoid this though!)
 - ❌ Class names get long
+
+---
+
+- 🤑 Components are a [subscription](https://tailwindui.com/all-access)

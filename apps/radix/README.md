@@ -10,3 +10,4 @@ An open source component library optimized for fast development, easy maintenanc
 ---
 
 - ❌ Opinionated
+- ❌ Need another css lib/use css modules for custom styles

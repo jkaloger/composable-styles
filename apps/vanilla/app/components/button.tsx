@@ -4,7 +4,7 @@ export const Button = () => (
   <button
     className={button({
       color: "neutral",
-      size: "large",
+      size: "small",
       rounded: true,
     })}
   >

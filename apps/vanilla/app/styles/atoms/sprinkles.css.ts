@@ -22,10 +22,19 @@ const responsiveProperties = defineProperties({
     marginRight: vars.spacingConst,
     marginTop: vars.spacingRel,
     marginBottom: vars.spacingRel,
+
+    width: { ...vars.spacingConst, ...vars.breakpoints },
+    maxWidth: { ...vars.spacingConst, ...vars.breakpoints, full: "100vw" },
+
+    fontSize: vars.fontSize,
+    fontWeight: vars.fontWeight,
+    lineHeight: vars.lineHeight,
   },
   shorthands: {
     margin: ["marginBottom", "marginLeft", "marginRight", "marginTop"],
     padding: ["paddingBottom", "paddingLeft", "paddingRight", "paddingTop"],
+    paddingX: ["paddingLeft", "paddingRight"],
+    paddingY: ["paddingTop", "paddingBottom"],
   },
 });
 
@@ -41,9 +50,12 @@ const eventProperties = defineProperties({
   properties: {
     backgroundColor: vars.colors,
     borderRadius: vars.borderRadius,
+    boxShadow: vars.shadows,
+    textDecoration: ["underline"],
   },
   shorthands: {
     radius: ["borderRadius"],
+    shadow: ["boxShadow"],
   },
 });
 
@@ -61,8 +73,32 @@ const animationProperties = defineProperties({
 });
 
 const unresponsiveProperties = defineProperties({
-  properties: {},
+  properties: {
+    backgroundColor: vars.colors,
+    background: vars.colors,
+    overflow: ["hidden", "visible", "scroll"],
+    fontFamily: ["serif", "sans", "mono"],
+    position: ["relative", "absolute", "sticky"],
+    backdropFilter: vars.backdropFilter,
+  },
   shorthands: {},
+});
+
+const flexProperties = defineProperties({
+  conditions: generateBreakpoints(breakpoints),
+  defaultCondition: "sm",
+  properties: {
+    display: ["flex", "inline-flex"],
+    flexDirection: ["row", "row-reverse", "column", "column-reverse"],
+    gap: vars.spacingRel,
+    alignItems: ["center", "flex-start", "flex-end"],
+    justifyContent: ["center", "flex-start", "flex-end"],
+  },
+  shorthands: {
+    direction: ["flexDirection"],
+    align: ["alignItems"],
+    justify: ["justifyContent"],
+  },
 });
 
 export const sprinkles = createSprinkles(
@@ -73,3 +109,12 @@ export const sprinkles = createSprinkles(
 );
 
 export type Sprinkles = Parameters<typeof sprinkles>[0];
+
+export const flexSprinkles = createSprinkles(
+  flexProperties,
+  responsiveProperties,
+  eventProperties,
+  unresponsiveProperties
+);
+
+export type FlexSprinkles = Parameters<typeof flexSprinkles>[0];

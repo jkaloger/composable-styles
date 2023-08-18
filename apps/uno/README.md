@@ -13,3 +13,4 @@ Atomic CSS Engine. Lightweight, agnostic, extensible.
 
 - ❌ More setup required
 - ❌ Attributify mode is hard to setup with type safety
+- ❌ Slow typescript completion

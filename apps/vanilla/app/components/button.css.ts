@@ -13,9 +13,9 @@ export const button = recipe({
       accent: { background: "slateblue" },
     },
     size: {
-      small: sprinkles({ padding: 2 }),
-      medium: sprinkles({ padding: 4 }),
-      large: sprinkles({ padding: 6 }),
+      small: sprinkles({ padding: 1 }),
+      medium: sprinkles({ padding: 2 }),
+      large: sprinkles({ padding: 3 }),
     },
     rounded: {
       true: sprinkles({ radius: "oval" }),
